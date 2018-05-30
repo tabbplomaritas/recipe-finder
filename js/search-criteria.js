@@ -4,9 +4,11 @@
     template: `
     <h2 class="viewHeader">Find your next culinary experiment!</h2>
       <form ng-submit="$ctrl.sendRequest($ctrl.query);">
-      
-        <input type="text" ng-model="$ctrl.query" placeholder="Enter a search query">
-        <button>Search</button>
+        <div class="searchWrapper">
+          <input type="text" ng-model="$ctrl.query" placeholder="Enter a search query">
+          <button class="searchIcon" >Search<img src="/../assets/Icons/search.svg"</button>
+        </div>
+        
       </form>
       <div>
         <recipe-list result="$ctrl.result"></recipe-list> 

@@ -44,6 +44,7 @@ body {
 }
 
 ng-view {
+  padding: 1rem;
   display: flex;
   flex-direction: column; 
   justify-content: flex-start;
@@ -52,8 +53,6 @@ ng-view {
   background-color: rgba(0, 89, 77, 0.884);
   height: 100vh;
 }
-
-
 
 #logo {
   width: 20rem;
@@ -114,6 +113,11 @@ nav {
   color: #00594D;
 }
 
+.viewHeader {
+  text-align: center;
+  color: #FFCC33
+}
+
 form {
   margin: 0 auto;
   width: 70%;
@@ -127,6 +131,10 @@ input {
   height: 3rem;
   padding: .5rem;
   border-radius: 5px;
+}
+
+.searchIcon {
+  width: 3rem;
 }
 
 button {
