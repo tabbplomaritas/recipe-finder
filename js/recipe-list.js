@@ -13,7 +13,6 @@ const recipeList = {
       </div>
   `,
   controller: ["RecipeRequest", function(RecipeRequest) {
-    let newRecipe = {};
     const vm = this;
 
     // vm.newRecipe = {

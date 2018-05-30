@@ -19,6 +19,7 @@
     controller: ["RecipeRequest", function(RecipeRequest) {
       const vm = this;
       vm.result = {};
+      vm.newRecipe = {};
       vm.sendRequest = (query) => {
         RecipeRequest.getRecipeRequest(query).then((data) => {
           vm.result = data;
