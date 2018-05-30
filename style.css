@@ -52,10 +52,16 @@ ng-view {
   width: 60%;
   background-color: rgba(0, 89, 77, 0.884);
   height: 100vh;
+  overflow: scroll;
 }
 
 #logo {
   width: 20rem;
+  transition: .3s all;
+}
+
+#logo:hover {
+  transform: rotate(360deg);
 }
 
 .motto {
@@ -120,7 +126,7 @@ nav {
 
 form {
   margin: 0 auto;
-  width: 70%;
+  width: 90%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -128,20 +134,23 @@ form {
 }
 
 input {
+  margin: 1rem;
+  width: 30rem;
   height: 3rem;
   padding: .5rem;
   border-radius: 5px;
 }
 
-.searchIcon {
-  width: 3rem;
+.searchWrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 button {
   height: 3rem;
+  width: 10rem;
   padding: .5rem;
-  margin: 1rem auto;
-  width: 6rem;
+  margin: 1rem;
   border-radius: 5px;
   background-color: #0A544A;
   color: #FFCC33;
@@ -153,4 +162,17 @@ button:hover {
   background-color: #FFCC33;
   color: #0A544A;
   cursor: pointer;
+}
+
+.searchButton {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.searchButton img {
+  width: 3rem;
+  color: #FFCC33;
 }

@@ -6,7 +6,10 @@
       <form ng-submit="$ctrl.sendRequest($ctrl.query);">
         <div class="searchWrapper">
           <input type="text" ng-model="$ctrl.query" placeholder="Enter a search query">
-          <button class="searchIcon" >Search<img src="/../assets/Icons/search.svg"</button>
+          <button class="searchButton">
+            <p>Search</p>
+            <img src="/../assets/Icons/search.svg">
+          </button>
         </div>
         
       </form>
