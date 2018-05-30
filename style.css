@@ -78,7 +78,7 @@ nav {
   justify-content: flex-start;
   width: 20%;
   padding: 1rem;
-  min-width: 24rem;;
+  min-width: 24rem;
   background-color: #FFCC33;
 }
 
@@ -96,7 +96,7 @@ nav {
 
 .navLinks a {
   padding: .5rem;
-  border-radius: 3px;
+  border-radius: 5px;
   margin: .5rem;
   color: white;
   background-color: #00594D;
@@ -120,7 +120,7 @@ form {
 input {
   height: 3rem;
   padding: .5rem;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 button {
@@ -128,7 +128,15 @@ button {
   padding: .5rem;
   margin: 1rem auto;
   width: 6rem;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: #0A544A;
   color: #FFCC33;
+  font-weight: bolder;
+}
+
+button:hover {
+  transition: .3s all;
+  background-color: #FFCC33;
+  color: #0A544A;
+  cursor: pointer;
 }
