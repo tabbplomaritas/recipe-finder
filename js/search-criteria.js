@@ -7,12 +7,12 @@
         <button>Search</button>
       </form>
       <div>
-        <recipe-list ng-repeat="item in $ctrl.result.data.hits" result="result"></recipe-list> 
+        <recipe-list result="$ctrl.result"></recipe-list> 
       </div>
     `,
     controller: ["RecipeRequest", function(RecipeRequest) {
       const vm = this;
-
+      vm.result = {};
       vm.sendRequest = (query) => {
         RecipeRequest.getRecipeRequest(query).then((data) => {
           vm.result = data;

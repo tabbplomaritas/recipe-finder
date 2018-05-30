@@ -4,6 +4,7 @@ function RecipeRequest($http) {
   let finalData = {};
 
   const getRecipeRequest = (query) => {
+    
     return $http({
       method: 'GET',
       url: `https://api.edamam.com/search?q=${query}&app_id=374a64e6&app_key=64ab82f36acec37332c27c94e94d9308`,
