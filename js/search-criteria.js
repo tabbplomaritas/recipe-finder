@@ -3,8 +3,10 @@
   const searchCriteria = {
     template: `
     <section class="view-area">
-      <input type="text" ng-model-"$ctrl.query" placeholder="Enter a search query">
-      <button type="button" ng-click="$ctrl.sendRequest($ctrl.query);">Get the some info</button>
+      <form ng-submit="$ctrl.sendRequest($ctrl.query);">
+        <input type="text" ng-model-"$ctrl.query" placeholder="Enter a search query">
+        <button type="button" ng-click="ng-submit">Get the some info</button>
+      </form>
     </section>
     `,
     controller: ["RecipeRequest", function(RecipeRequest) {
