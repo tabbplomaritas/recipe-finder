@@ -13,5 +13,5 @@ angular
       .when("/favorites-page", {
         template: "<favorites-page></favorites-page>"
       })
-      .otherwise({ redirectto : "/search-criteria" })
+      .otherwise({ redirectTo : "/search-criteria" })
   });
