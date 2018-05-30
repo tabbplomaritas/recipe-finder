@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/delicious.jpg);
+  background-size: cover;
+}
+
+ng-view {
+  width: 40%;
+  background-color: #00594D;
+  opacity: .8;
+}
+
+nav {
+  width: 40rem;
+  background-color: #FFCC33;
+}
+
+#logo {
+  width: 20rem;
+}
