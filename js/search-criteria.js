@@ -7,7 +7,7 @@
         <div class="searchWrapper">
           <input type="text" ng-model="$ctrl.query" placeholder="Enter a search query">
           <button class="searchButton">
-            <img src="/../assets/Icons/search.svg">
+            <img src="assets/Icons/search.svg">
           </button>
         </div>
         
