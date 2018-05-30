@@ -2,9 +2,10 @@
 
   const searchCriteria = {
     template: `
-    <input type="text" ng-model-"$ctrl.query" placeholder="Enter a search query">
-    <button type="button" ng-click="$ctrl.sendRequest($ctrl.query);">Get the some info</button>
-
+    <section class="view-area">
+      <input type="text" ng-model-"$ctrl.query" placeholder="Enter a search query">
+      <button type="button" ng-click="$ctrl.sendRequest($ctrl.query);">Get the some info</button>
+    </section>
     `,
     controller: ["RecipeRequest", function(RecipeRequest) {
       const vm = this;
@@ -16,6 +17,9 @@
       }
     }]
   };
+
+  console.log("searchCriteria")
+
 
 angular
   .module("App")
