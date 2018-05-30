@@ -16,9 +16,11 @@ const favoritesPage = {
     const vm = this;
 
     vm.newRecipe = {
-      recipeTitle: vm.result.data.hits.recipe.label,
-      recipeImg: vm.result.data.hits.recipe.img,
-      recipeIngred: vm.result.data.hits.recipe.img
+      title: vm.result.data.hits.recipe.label,
+      img: vm.result.data.hits.recipe.img,
+      ingredients: vm.result.data.hits.recipe.img,
+      origUrl: {url},
+      origSrc: {source},
     }
 
   }]

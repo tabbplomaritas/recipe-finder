@@ -15,7 +15,6 @@ const recipeList = {
   controller: ["RecipeRequest", function(RecipeRequest) {
     let newRecipe = {};
     const vm = this;
-    console.log(vm.result);
 
     // vm.newRecipe = {
     //   recipeTitle: vm.result.data.hits.recipe.label,
