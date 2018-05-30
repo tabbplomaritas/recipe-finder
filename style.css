@@ -1,7 +1,33 @@
+@font-face {
+  font-family: headerBold;
+  src: url(assets/fonts/stoneserif/StoneSerif-Bold.otf);
+}
+
+@font-face {
+  font-family: header;
+  src: url(assets/fonts/stoneserif/StoneSerif.otf);
+}
+
+@font-face {
+  font-family: bodyFont;
+  src: url(assets/fonts/stonesans/StoneSans.otf);
+}
+
+@font-face {
+  font-family: bodyFontBold;
+  src: url(assets/fonts/stonesans/StoneSans-Bold.otf);
+}
+
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  text-decoration: none;
 }
+
+
 
 html {
   font-size: 62.5%;
@@ -14,32 +40,95 @@ body {
   height: 100vh;
   background-image: url(images/delicious.jpg);
   background-size: cover;
+  font-family: bodyFont;
 }
 
 ng-view {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  align-items: center;
   width: 60%;
-  background-color: #00594D;
-  opacity: .8;
+  background-color: rgba(0, 89, 77, 0.884);
   height: 100vh;
 }
 
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  width: 20%;
-  background-color: #FFCC33;
-}
+
 
 #logo {
   width: 20rem;
 }
 
-form {
+.motto {
+  font-family: header;
+  /* margin: 1rem; */
+  color: #093F39;
+  font-size: 3rem;
+}
+
+.motto p:nth-child(2){
+    margin-left: 3rem;
+}
+
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 20%;
+  padding: 1rem;
+  min-width: 24rem;;
+  background-color: #FFCC33;
+}
+
+.navLinks {
+  font-size: 2rem;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   width: 100%;
+  text-align: center;
+}
+
+.navLinks a {
+  padding: .5rem;
+  border-radius: 3px;
+  margin: .5rem;
+  color: white;
+  background-color: #00594D;
+  transition: .3s all;
+}
+
+.navLinks a:hover {
+  background-color: white;
+  color: #00594D;
+}
+
+form {
+  margin: 0 auto;
+  width: 70%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
+}
+
+input {
+  height: 3rem;
+  padding: .5rem;
+  border-radius: 3px;
+}
+
+button {
+  height: 3rem;
+  padding: .5rem;
+  margin: 1rem auto;
+  width: 6rem;
+  border-radius: 3px;
+  background-color: #0A544A;
+  color: #FFCC33;
 }
