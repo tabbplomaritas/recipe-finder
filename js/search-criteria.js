@@ -2,25 +2,24 @@
 
   const searchCriteria = {
     template: `
-    <section class="view-area">
       <form ng-submit="$ctrl.sendRequest($ctrl.query);">
         <input type="text" ng-model-"$ctrl.query" placeholder="Enter a search query">
-        <button type="button" ng-click="ng-submit">Get the some info</button>
+        <button>Search</button>
       </form>
-    </section>
+      <div>
+        <recipe-list ng-repeat="item in $ctrl.result.data.hits" result="result"></recipe-list> 
+      </div>
     `,
     controller: ["RecipeRequest", function(RecipeRequest) {
       const vm = this;
+
       vm.sendRequest = (query) => {
         RecipeRequest.getRecipeRequest(query).then((data) => {
           vm.result = data;
-          console.log(vm.result);
         });
       }
     }]
   };
-
-  console.log("searchCriteria")
 
 
 angular
