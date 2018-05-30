@@ -183,5 +183,13 @@ button:hover {
 
 .iconWrapper {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.iconWrapper a:link {
+  color: #0A544A; 
+}
+
+.iconWrapper a:hover {
+  color: rgba(10, 84, 74, 0.8); 
 }
