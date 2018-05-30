@@ -2,8 +2,10 @@
 
   const searchCriteria = {
     template: `
+    <h2 class="viewHeader">Find your next culinary experiment!</h2>
       <form ng-submit="$ctrl.sendRequest($ctrl.query);">
-        <input type="text" ng-model-"$ctrl.query" placeholder="Enter a search query">
+      
+        <input type="text" ng-model="$ctrl.query" placeholder="Enter a search query">
         <button>Search</button>
       </form>
       <div>
