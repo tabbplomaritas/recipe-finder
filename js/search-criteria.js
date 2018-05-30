@@ -1,6 +1,6 @@
 "use strict";
 
-  const request = {
+  const searchCriteria = {
     template: `
     <input type="text" ng-model-"$ctrl.query" placeholder="Enter a search query">
     <button type="button" ng-click="$ctrl.sendRequest($ctrl.query);">Get the some info</button>
@@ -19,4 +19,4 @@
 
 angular
   .module("App")
-  .component("request", request);
+  .component("searchCriteria", searchCriteria);
