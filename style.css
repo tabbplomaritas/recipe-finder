@@ -180,3 +180,8 @@ button:hover {
   width: 2.5rem;
   color: #FFCC33;
 }
+
+.iconWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
