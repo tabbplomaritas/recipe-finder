@@ -6,9 +6,13 @@ function RecipeRequest($http) {
 
   const getRecipeRequest = (query, prepTime) => {
 
+    if(prepTime === undefined){
+      prepTime = "";
+    }
+
     return $http({
       method: 'GET',
-      url: `https://api.edamam.com/search?q=${query}&app_id=374a64e6&app_key=${key()}`,
+      url: `https://api.edamam.com/search?q=${query}&app_id=374a64e6&app_key=${key()}${prepTime}`,
       // &from=0
       // &to=10
       // &calories=591-722

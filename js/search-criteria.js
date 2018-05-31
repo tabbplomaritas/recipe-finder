@@ -28,10 +28,10 @@
       const vm = this;
       vm.result = {};
       vm.newRecipe = {};
-      vm.prepTime020 ="0-20";
-      vm.prepTime2040 ="20-40";
-      vm.prepTime4060 ="40-60";
-      vm.prepTime60 ="60%2B";
+      vm.prepTime020 ="&time=0-20";
+      vm.prepTime2040 ="&time=20-40";
+      vm.prepTime4060 ="&time=40-60";
+      vm.prepTime60 ="&time=60%2B";
      
 
       vm.sendRequest = (query, prepTime) => {
