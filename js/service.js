@@ -57,9 +57,9 @@ function RecipeRequest($http, $location) {
    return clickedThumbnail;
   }
 
-  const viewDetails = ($location) =>{
-    return clickedThumbnail;
+  const viewDetails = () =>{
     $location.path("/recipe-details")
+    return clickedThumbnail;
   }
 
   return {
