@@ -11,7 +11,7 @@ function RecipeRequest($http) {
     }
 
     if(calories === undefined){
-      calories = "undefined";
+      calories = "";
     }
 console.log(calories);
 
