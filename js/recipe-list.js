@@ -12,7 +12,7 @@ const recipeList = {
           <i class="material-icons" ng-click="$ctrl.addToFavorite(item);">grade</i>
         </div>
         <img src="{{ item.recipe.image }}" >
-        <p>Calories: </p>
+        <p>Calories: {{ item.recipe.calories }}</p>
       </div>
   `,
   controller: ["RecipeRequest", function(RecipeRequest) {

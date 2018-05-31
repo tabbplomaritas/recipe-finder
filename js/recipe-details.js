@@ -4,19 +4,20 @@ const recipeDetails = {
    
     template: `
         <div class="recipe">
-            <h1>this is working</h1>
-            <h1>{{clickedRecipe.recipe.label}}</h1>
-            <img src="{{ item.recipe.image }}">
-            <p>Ingredients: {{}} </p>
-            <p>Prep Time: {{}}</p>
-            <p><a href="{{item.recipe.url}}" target="_blank">Click here</a> for instructions.</p>
+            <h1>{{$ctrl.clickedRecipe.recipe.label}}</h1>
+            <img src="{{ $ctrl.clickedRecipe.recipe.image }}">
+            <p>Ingredients:</p>
+            <ul>
+                <li ng-repeat="ingredients in $ctrl.clickedRecipe.recipe.ingredientLines">{{ ingredients }}</li>
+            </ul>
+            <p>Prep Time: {{ $ctrl.clickedRecipe.recipe.totalTime }} Minutes</p>
+            <p><a href="{{ $ctrl.clickedRecipe.recipe.url }}" target="_blank">Click here</a> for instructions.</p>
         </div>
     `,
     controller: ["RecipeRequest", function(RecipeRequest) {
         const vm = this;
         vm.clickedRecipe = RecipeRequest.viewDetails();
         console.log(vm.clickedRecipe);
-        
         
     }]
 }
