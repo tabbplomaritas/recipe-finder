@@ -12,7 +12,7 @@ const recipeList = {
           <i class="material-icons">grade</i>
         </div>
         <img src="{{ item.recipe.image }}" >
-        <p>Ingredients: </p>
+        <p>Calories: </p>
       </div>
   `,
   controller: ["RecipeRequest", function(RecipeRequest) {

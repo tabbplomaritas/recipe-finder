@@ -230,3 +230,25 @@ recipe-list {
   color: white;
   cursor: pointer;
 }
+
+.prepTime {
+  display: flex;
+  flex-direction: column;
+}
+
+.prepTime_options {
+  display: flex;
+  flex-direction: row;
+}
+
+.prepTime h3 {
+  display: inline;
+}
+
+input[type="radio"] {
+  height: 1.5rem;
+}
+.prepTime_options label {
+  font-size: 1.2rem;
+  text-align: center;
+}
