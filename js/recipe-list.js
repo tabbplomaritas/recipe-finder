@@ -6,7 +6,7 @@ const recipeList = {
   },
   template: `
      
-      <div class="recipeThumbs" ng-repeat="item in $ctrl.result.data.hits">
+      <div class="recipeThumbs" item="$ctrl.item" ng-click="$ctrl.viewRecipeDetails(item)" ng-repeat="item in $ctrl.result.data.hits">
         <div class="starCont">  
           <h1>{{item.recipe.label}}</h1>
           <i class="material-icons" ng-click="{ng-class:favorited} ? $ctrl.addToFavorite(item); : $ctrl.removeFavorite(item)">grade</i>
@@ -21,6 +21,9 @@ const recipeList = {
     vm.addToFavorite = (item) => {
       RecipeRequest.addFavorite(item);
       console.log(item);
+    }
+    vm.viewRecipeDetails = (item) => {
+
     }
 
     vm.removeFavorite = (item) => {
