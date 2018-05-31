@@ -2,7 +2,7 @@
 
 const recipeDetails = {
     bindings: {
-        item: "<"
+        clikedThing: "<"
       },
     template: `
         <div class="recipe">
@@ -16,7 +16,7 @@ const recipeDetails = {
     `,
     controller: ["RecipeRequest", function(RecipeRequest) {
         const vm = this;
-        console.log(item);
+        console.log(clickedThing);
     }]
 }
 
