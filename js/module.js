@@ -13,5 +13,8 @@ angular
       .when("/favorites-page", {
         template: "<favorites-page></favorites-page>"
       })
+      .when("/recipe-details", {
+        template: "<recipe-details></recipe-details>"
+      })
       .otherwise({ redirectTo : "/search-criteria" })
   });
