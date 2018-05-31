@@ -9,7 +9,7 @@ const recipeList = {
       <div class="recipeThumbs" ng-repeat="item in $ctrl.result.data.hits">
         <div class="starCont">  
           <h1>{{item.recipe.label}}</h1>
-          <i class="material-icons" ng-click="$ctrl.favoriteToAdd(item);">grade</i>
+          <i class="material-icons" ng-click="{ng-class:favorited} ? $ctrl.addToFavorite(item); : $ctrl.removeFavorite(item)">grade</i>
         </div>
         <img src="{{ item.recipe.image }}" >
         <p>Calories: </p>
@@ -18,10 +18,16 @@ const recipeList = {
   controller: ["RecipeRequest", function(RecipeRequest) {
     const vm = this;
 
-    vm.favoriteToAdd = (newFavorite) => {
-      RecipeRequest.addFavorite(newFavorite);
-      console.log(newFavorite);
+    vm.addToFavorite = (item) => {
+      RecipeRequest.addFavorite(item);
+      console.log(item);
     }
+
+    vm.removeFavorite = (item) => {
+      RecipeRequest.removeFavorite(item);
+      console.log(item);  
+    }
+    
 
     // vm.newRecipe = {
     //   recipeTitle: vm.result.data.hits.recipe.label,

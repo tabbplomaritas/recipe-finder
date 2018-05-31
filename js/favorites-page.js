@@ -18,14 +18,6 @@ const favoritesPage = {
   controller: ["RecipeRequest", function(RecipeRequest) {
     const vm = this;
 
-    vm.newRecipe = {
-      title: vm.result.data.hits.recipe.label,
-      img: vm.result.data.hits.recipe.img,
-      ingredients: vm.result.data.hits.recipe.img,
-      origUrl: {url},
-      origSrc: {source},
-    }
-
   }]
 };
 
