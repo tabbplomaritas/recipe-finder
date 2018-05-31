@@ -236,7 +236,7 @@ recipe-list {
   flex-direction: column;
 }
 
-.prepTime_options {
+.options {
   display: flex;
   flex-direction: row;
 }
@@ -248,7 +248,7 @@ recipe-list {
 input[type="radio"] {
   height: 1.5rem;
 }
-.prepTime_options label {
+.options label {
   font-size: 1.2rem;
   text-align: center;
 }

@@ -4,15 +4,22 @@ function RecipeRequest($http) {
   let finalData = {};
   let favorites = [];
 
-  const getRecipeRequest = (query, prepTime) => {
+  const getRecipeRequest = (query, prepTime, calories) => {
 
     if(prepTime === undefined){
       prepTime = "";
     }
 
+    if(calories === undefined){
+      calories = "undefined";
+    }
+console.log(calories);
+
+    
+
     return $http({
       method: 'GET',
-      url: `https://api.edamam.com/search?q=${query}&app_id=374a64e6&app_key=${key()}${prepTime}`,
+      url: `https://api.edamam.com/search?q=${query}&app_id=374a64e6&app_key=${key()}${prepTime}${calories}`,
       // &from=0
       // &to=10
       // &calories=591-722
