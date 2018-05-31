@@ -13,14 +13,16 @@ const searchCriteria = {
       <div class="prepTime">
         <h3>Prep time</h3>
         <div class="options">
-          <label>0-20 Minutes</label>
           <input name="prepTime" type="radio" ng-model="$ctrl.prepTime" ng-value="$ctrl.prepTime020">
-          <label>20-40 Minutes</label>
+          <label>0-20 Minutes</label>
           <input name="prepTime" type="radio" ng-model="$ctrl.prepTime" ng-value="$ctrl.prepTime2040">
-          <label>40-60</label>
+          <label>20-40 Minutes</label>
+          
           <input name="prepTime" type="radio" ng-model="$ctrl.prepTime" ng-value="$ctrl.prepTime4060">
-          <label>60+ Minutes</label>
+          <label>40-60 Minutes</label>
+         
           <input name="prepTime" type="radio" ng-model="$ctrl.prepTime" ng-value="$ctrl.prepTime60">
+          <label>60+ Minutes</label>
         </div>
       </div>
 
