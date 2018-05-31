@@ -29,14 +29,14 @@ const searchCriteria = {
       <div class="calories">
         <h3>Calories in recipe</h3>
         <div class="options">
-          <label>0-1000 Calories</label>
           <input name="calories" type="radio" ng-model="$ctrl.calories" ng-value="$ctrl.calories0">
-          <label>1000 - 1500 Calories</label>
-          <input name="calories" type="radio" ng-model="$ctrl.calories" ng-value="$ctrl.calories1000">
-          <label>1500 - 2000 Calories </label>
-          <input name="calories" type="radio" ng-model="$ctrl.calories" ng-value="$ctrl.calories1500">
-          <label>2000+ Calories</label>
-          <input name="calories" type="radio" ng-model="$ctrl.calories" ng-value="$ctrl.calories2000">
+          <label>0-500 cals</label>
+          <input name="calories" type="radio" ng-model="$ctrl.calories" ng-value="$ctrl.calories500">
+          <label>500 - 800 cals</label>
+          <input name="calories" type="radio" ng-model="$ctrl.calories" ng-value="$ctrl.calories800">
+          <label>800 - 1200 cals </label>
+          <input name="calories" type="radio" ng-model="$ctrl.calories" ng-value="$ctrl.calories1200">
+          <label>1200+ cals</label>
         </div>
       </div>
   </form>
@@ -53,10 +53,10 @@ const searchCriteria = {
       vm.prepTime4060 ="&time=40-60";
       vm.prepTime60 ="&time=60%2B";
 
-      vm.calories0 ="&calories=0-1000";
-      vm.calories1000 ="&calories=1000-1500";
-      vm.calories1500 ="&calories=1500-2000";
-      vm.calories2000 ="&calories=2000%2B";
+      vm.calories0 ="&calories=0-500";
+      vm.calories500 ="&calories=500-800";
+      vm.calories800 ="&calories=800-1200";
+      vm.calories1200 ="&calories=1200%2B";
      
 
 
