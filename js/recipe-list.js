@@ -32,20 +32,12 @@ const recipeList = {
       RecipeRequest.removeFavorite(item);
       console.log(item);  
     }
-    
-
-    // vm.newRecipe = {
-    //   recipeTitle: vm.result.data.hits.recipe.label,
-    //   recipeImg: vm.result.data.hits.recipe.img,
-    //   recipeIngred: vm.result.data.hits.recipe.img
-    // }.data.hits["0"].recipe.url
-    
 
   }]
 };
-// .data.hits[1].recipe.label
 
-recipeList.$inject = 
+
+
 
 angular
   .module("App")

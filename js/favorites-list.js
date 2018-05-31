@@ -2,13 +2,13 @@
 
 const favoritesList = {
   template: `
+      <h2 class="viewHeader">My Recipes</h2>
       <div class="recipeThumbs" ng-click="$ctrl.sendRecipeDetails(item)" ng-repeat="item in $ctrl.favorites" item="item">
         <div class="starCont">  
           <h1>{{item.recipe.label}}</h1>
-          <i class="material-icons" ng-click="$ctrl.removeFavorite($index);">grade</i>
+          <i class="material-icons" ng-click="$ctrl.removeFavorite($index);">cancel</i>
         </div>
         <img src="{{ item.recipe.image }}" >
-        <p>Calories: {{ item.recipe.calories }}</p>
       </div>
   `,
   controller: ["RecipeRequest", function(RecipeRequest) {
