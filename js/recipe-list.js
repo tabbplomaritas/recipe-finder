@@ -8,11 +8,11 @@ const recipeList = {
      
       <div class="recipeThumbs" ng-click="$ctrl.sendRecipeDetails(item)" ng-repeat="item in $ctrl.result.data.hits" item="item">
         <div class="starCont">  
-          <h1>{{item.recipe.label}}</h1>
+          <h4 class="recipelabel">{{item.recipe.label}}</h4>
           <i class="material-icons" ng-click="$ctrl.addToFavorite(item);">grade</i>
         </div>
         <img src="{{ item.recipe.image }}" >
-        <p>Calories: {{ item.recipe.calories }}</p>
+        </p>
       </div>
   `,
   controller: ["RecipeRequest", function(RecipeRequest) {

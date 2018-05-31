@@ -4,13 +4,13 @@ const recipeDetails = {
    
     template: `
         <div class="recipe">
-            <h1>{{$ctrl.clickedRecipe.recipe.label}}</h1>
+            <h2>{{$ctrl.clickedRecipe.recipe.label}}</h2>
             <img src="{{ $ctrl.clickedRecipe.recipe.image }}">
-            <p>Ingredients:</p>
+            <h4>Prep Time: <spanclass="recipeSmallFont">{{ $ctrl.clickedRecipe.recipe.totalTime }}</spanclass> Minutes</h4>
+            <h4 class="ingredients">Ingredients:</h4>
             <ul>
-                <li ng-repeat="ingredients in $ctrl.clickedRecipe.recipe.ingredientLines">{{ ingredients }}</li>
+                <li class="recipeSmallFont" ng-repeat="ingredients in $ctrl.clickedRecipe.recipe.ingredientLines">{{ ingredients }}</li>
             </ul>
-            <p>Prep Time: {{ $ctrl.clickedRecipe.recipe.totalTime }} Minutes</p>
             <p><a href="{{ $ctrl.clickedRecipe.recipe.url }}" target="_blank">Click here</a> for instructions.</p>
         </div>
     `,

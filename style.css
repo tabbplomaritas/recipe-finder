@@ -39,6 +39,7 @@ body {
   background-image: url(images/delicious.jpg);
   background-size: cover;
   font-family: bodyFont;
+  font-size: 1.6rem;
 }
 
 ng-view {
@@ -120,6 +121,8 @@ nav {
   color: #FFCC33
 }
 
+/* search-criteria view styles */
+
 form {
   margin: 0 auto;
   width: 100%;
@@ -197,7 +200,6 @@ recipe-list {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-
 }
 
 .recipeThumbs {
@@ -262,4 +264,59 @@ input[type="radio"] {
   text-align: center;
   color: white; 
   margin-left: -7rem;
+}
+
+
+/* recipe-details styles */
+
+recipe-details{
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center; */
+}
+
+.recipe{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  color: #FFCC33;
+
+}
+
+.recipe img {
+  padding: 1rem;
+  max-height: 30rem;
+  width: auto;
+  margin: 0 auto;
+}
+
+h4 {
+  font-size: 1.2rem;
+  padding: .5rem;
+}
+
+.recipe h4 {
+  font-size: 1.4rem;
+  color: #FFCC33;
+}
+
+.ingredients {
+  color: #FFCC33;
+  margin: .5rem 0;
+}
+
+.recipe a {
+  color: white;
+}
+
+.recipeSmallFont {
+  font-size: 1.5rem;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 3rem;
 }
