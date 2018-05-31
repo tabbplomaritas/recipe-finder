@@ -1,8 +1,9 @@
 "use strict";
 
-function RecipeRequest($http) {
+function RecipeRequest($http, $location) {
   let finalData = {};
   let favorites = [];
+  let clickedThumbnail = {};
 
   const getRecipeRequest = (query, prepTime, calories) => {
 
@@ -13,9 +14,6 @@ function RecipeRequest($http) {
     if(calories === undefined){
       calories = "";
     }
-console.log(calories);
-
-    
 
     return $http({
       method: 'GET',
@@ -27,8 +25,7 @@ console.log(calories);
     }).then((response) => {
       finalData = response;
       
-      console.log(finalData);
-      console.log(prepTime);
+  
       
       return finalData;
     }, (error) => {
@@ -55,17 +52,29 @@ console.log(calories);
     return favorites;
   }
 
+  const sendDetails = (item) => {
+    clickedThumbnail = item;
+   return clickedThumbnail;
+  }
 
+  const viewDetails = ($location) =>{
+    return clickedThumbnail;
+    $location.path("/recipe-details")
+  }
 
   return {
     getRecipeRequest,
     returnResults,
     addFavorite,
     removeFavorite,
-    getFavorites
+    getFavorites, 
+    sendDetails, 
+    viewDetails
   };
   
 }
+
+
 
 angular
   .module("App")

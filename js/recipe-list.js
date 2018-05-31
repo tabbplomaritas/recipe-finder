@@ -6,7 +6,7 @@ const recipeList = {
   },
   template: `
      
-      <div class="recipeThumbs" ng-click="$ctrl.viewRecipeDetails(item)" ng-repeat="item in $ctrl.result.data.hits clickedThing="$ctrl.clickedItem">
+      <div class="recipeThumbs" ng-click="$ctrl.viewRecipeDetails(item)" ng-repeat="item in $ctrl.result.data.hits" item="item">
         <div class="starCont">  
           <h1>{{item.recipe.label}}</h1>
           <i class="material-icons" ng-click="$ctrl.addToFavorite(item);">grade</i>
@@ -24,7 +24,11 @@ const recipeList = {
     }
     
     vm.viewRecipeDetails = (item) => {
-        vm.clickedItem = item;
+      RecipeRequest.viewDetails(item);
+
+      console.log(item);
+
+      
     }
 
     vm.removeFavorite = (item) => {
@@ -43,6 +47,9 @@ const recipeList = {
   }]
 };
 // .data.hits[1].recipe.label
+
+recipeList.$inject = 
+
 angular
   .module("App")
   .component("recipeList", recipeList);
