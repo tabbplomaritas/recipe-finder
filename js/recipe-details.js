@@ -15,7 +15,7 @@ const recipeDetails = {
     controller: ["RecipeRequest", function(RecipeRequest) {
         const vm = this;
         vm.clickedRecipe = RecipeRequest.viewDetails();
-        console.log(clickedRecipe);
+        console.log(vm.clickedRecipe);
         
         
     }]

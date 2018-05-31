@@ -6,7 +6,7 @@ const recipeList = {
   },
   template: `
      
-      <div class="recipeThumbs" ng-click="$ctrl.viewRecipeDetails(item)" ng-repeat="item in $ctrl.result.data.hits" item="item">
+      <div class="recipeThumbs" ng-click="$ctrl.sendRecipeDetails(item)" ng-repeat="item in $ctrl.result.data.hits" item="item">
         <div class="starCont">  
           <h1>{{item.recipe.label}}</h1>
           <i class="material-icons" ng-click="$ctrl.addToFavorite(item);">grade</i>
@@ -23,9 +23,8 @@ const recipeList = {
       console.log(item);
     }
     
-    vm.viewRecipeDetails = (item) => {
-      RecipeRequest.viewDetails(item);
-
+    vm.sendRecipeDetails = (item) => {
+      RecipeRequest.sendDetails(item);
       console.log(item);
 
       
