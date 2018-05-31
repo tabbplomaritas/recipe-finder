@@ -4,18 +4,21 @@ function RecipeRequest($http) {
   let finalData = {};
   let favorites = [];
 
-  const getRecipeRequest = (query) => {
-    
+  const getRecipeRequest = (query, prepTime) => {
+
     return $http({
       method: 'GET',
-      url: `https://api.edamam.com/search?q=${query}&app_id=374a64e6&app_key=64ab82f36acec37332c27c94e94d9308`,
+      url: `https://api.edamam.com/search?q=${query}&app_id=374a64e6&app_key=${key}`,
       // &from=0
       // &to=10
       // &calories=591-722
       // &health=alcohol-free
     }).then((response) => {
       finalData = response;
+      
       console.log(finalData);
+      console.log(prepTime);
+      
       return finalData;
     }, (error) => {
       console.log(error);
