@@ -42,6 +42,7 @@ console.log(calories);
   
   const addFavorite = (favorite) => {
     favorites.push(favorite);
+    console.log(favorites);
     return favorites;
   }
 
