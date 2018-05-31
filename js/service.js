@@ -8,7 +8,7 @@ function RecipeRequest($http) {
 
     return $http({
       method: 'GET',
-      url: `https://api.edamam.com/search?q=${query}&app_id=374a64e6&app_key=${key}`,
+      url: `https://api.edamam.com/search?q=${query}&app_id=374a64e6&app_key=${key()}`,
       // &from=0
       // &to=10
       // &calories=591-722
