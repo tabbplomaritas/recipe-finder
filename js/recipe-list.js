@@ -12,7 +12,7 @@ const recipeList = {
           <i class="material-icons" ng-click="$ctrl.addToFavorite(item); $event.stopPropagation();">grade</i>
         </div>
         <img src="{{ item.recipe.image }}" >
-        </p>
+        
       </div>
   `,
   controller: ["RecipeRequest", function(RecipeRequest) {
