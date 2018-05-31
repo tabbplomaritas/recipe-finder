@@ -1,11 +1,4 @@
+"use strict";
 const key = function() {
-
-return '64ab82f36acec37332c27c94e94d9308';
-
+  return prompt("Enter API Key");
 }
-
-console.log("key js is working");
-
-
-angular("App")
-  .controller("key", key);
