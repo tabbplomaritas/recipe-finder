@@ -10,8 +10,8 @@ angular
       .when("/recipe-list", {
         template: "<recipe-list></recipe-list>"
       })
-      .when("/favorites-page", {
-        template: "<favorites-page></favorites-page>"
+      .when("/favorites-list", {
+        template: "<favorites-list></favorites-list>"
       })
       .when("/recipe-details", {
         template: "<recipe-details></recipe-details>"
