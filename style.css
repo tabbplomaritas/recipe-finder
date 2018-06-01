@@ -153,7 +153,7 @@ button {
   width: 5rem;
   margin: 1rem 1rem 1rem 0;
   border-left: none;
-  background: linear-gradient(rgba(10, 84, 74, 0.788), rgba(10, 84, 74, 0.301));
+  /* background: linear-gradient(rgba(10, 84, 74, 0.788), rgba(10, 84, 74, 0.301)); */
   color: #FFCC33;
   font-weight: bolder;
 }
@@ -255,6 +255,11 @@ recipe-list, favorites-list {
   padding: .5rem;
   border-radius: .5rem;
 }
+
+#advancedSearchButton:focus {
+  outline: none;
+}
+
 
 .options {
   margin-bottom: 1rem;
