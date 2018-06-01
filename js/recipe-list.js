@@ -18,6 +18,10 @@ const recipeList = {
   controller: ["RecipeRequest", function(RecipeRequest) {
     const vm = this;
 
+    if (vm.result === null) {
+      vm.result = RecipeRequest.returnResuts();
+    }
+
     vm.addToFavorite = (item) => {
       RecipeRequest.addFavorite(item);
       console.log(item);

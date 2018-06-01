@@ -61,13 +61,17 @@ const searchCriteria = {
       vm.calories800 ="&calories=800-1200";
       vm.calories1200 ="&calories=1200%2B";
      
+      vm.result = RecipeRequest.returnResults();
+      console.log(vm.result);
 
+      vm.showAdvanced = () => {
+        console.log("show advanced button working");
+        
+        angular.element(document.querySelectorAll('.advancedSearch') ).css("display", "flex");
+      }
 
       vm.sendRequest = (query, prepTime, calories) => {
-        if(isAdvancedOpen){
-          console.log("advanced is open");
-          
-        }
+
       RecipeRequest.getRecipeRequest(query, prepTime, calories).then((data) => {
         vm.result = data;
 
