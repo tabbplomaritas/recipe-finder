@@ -328,3 +328,26 @@ ul {
   list-style: none;
   margin-bottom: 3rem;
 }
+
+.sectionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.6rem;
+}
+
+.sectionHeader a {
+  width: 1.5rem;
+  text-align: right;
+  margin-right: 2rem;
+  color: #FFCC33;
+}
+.sectionHeader a:hover{
+  color: white;
+  background-color: transparent;
+}
+
+
+.sectionHeader a i{
+  font-size: 3.5rem;
+}

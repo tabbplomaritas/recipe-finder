@@ -46,8 +46,8 @@ const searchCriteria = {
     `,
     controller: ["RecipeRequest", function(RecipeRequest) {
       const vm = this;
-      vm.result = {};
-      vm.newRecipe = {};
+      // vm.result = {};
+      // vm.newRecipe = {};
       vm.prepTime020 ="&time=0-20";
       vm.prepTime2040 ="&time=20-40";
       vm.prepTime4060 ="&time=40-60";
