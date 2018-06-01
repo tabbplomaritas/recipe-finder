@@ -1,4 +1,4 @@
 "use strict";
 const key = function() {
-  return prompt("Enter API Key");
+  return "64ab82f36acec37332c27c94e94d9308";
 }
