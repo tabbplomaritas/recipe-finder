@@ -64,10 +64,8 @@ const searchCriteria = {
 
 
       vm.sendRequest = (query, prepTime, calories) => {
-        if(isAdvancedOpen){
-          console.log("advanced is open");
-          
-        }
+      angular
+
       RecipeRequest.getRecipeRequest(query, prepTime, calories).then((data) => {
         vm.result = data;
 

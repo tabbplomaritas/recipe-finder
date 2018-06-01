@@ -238,9 +238,9 @@ recipe-list, favorites-list {
   cursor: pointer;
 }
 
-.advancedSearch{
+/* .advancedSearch{
   display: 
-}
+} */
 
 .advancedSearchOn {
   display: flex;
@@ -249,12 +249,19 @@ recipe-list, favorites-list {
 }
 
 #advancedSearchButton {
+  color: #093F39;
+  background-color: #FFCC33;
   margin: 0 auto;
   width: 8rem;
   height: 4rem;
   padding: .5rem;
   border-radius: .5rem;
 }
+#advancedSearchButton:hover{
+  background-color: #093F39;
+  color: #FFCC33;
+}
+
 
 #advancedSearchButton:focus {
   outline: none;
