@@ -13,17 +13,20 @@ const favoritesList = {
   `,
   controller: ["RecipeRequest", function(RecipeRequest) {
     const vm = this;
+
+    // get our favorites data from the service and prepare it to be used locally
     vm.favorites = RecipeRequest.getFavorites();
 
+    // function to send the index of the item we want to remove
     vm.removeFavorite = (index) => {
       RecipeRequest.removeFavorite(index);
     }
 
+    // function to get the detailed view of our saved recipe
     vm.sendRecipeDetails = (item) => {
       RecipeRequest.sendDetails(item);
       console.log(item);      
     }
-
   }]
 };
 

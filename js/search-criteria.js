@@ -48,44 +48,38 @@ const searchCriteria = {
   <div>
     <recipe-list result="$ctrl.result"></recipe-list> 
   </div>
-    `,
-    controller: ["RecipeRequest", function(RecipeRequest) {
-      const vm = this;
-      // vm.result = {};
-      // vm.newRecipe = {};
-      vm.prepTime020 ="&time=0-20";
-      vm.prepTime2040 ="&time=20-40";
-      vm.prepTime4060 ="&time=40-60";
-      vm.prepTime60 ="&time=60%2B";
+  `,
 
-      vm.calories0 ="&calories=0-500";
-      vm.calories500 ="&calories=500-800";
-      vm.calories800 ="&calories=800-1200";
-      vm.calories1200 ="&calories=1200%2B";
-     
-      vm.result = RecipeRequest.returnResults();
-      console.log(vm.result);
+  controller: ["RecipeRequest", function(RecipeRequest) {
+    const vm = this;
 
-      vm.showAdvanced = () => {
-        console.log("show advanced button working");
-        
-        // angular.element(document.querySelectorAll('.advancedSearch') ).css("display", "flex");
-      }
+    // Set up some variables of strings for search attributes 
+    vm.prepTime020 ="&time=0-20";
+    vm.prepTime2040 ="&time=20-40";
+    vm.prepTime4060 ="&time=40-60";
+    vm.prepTime60 ="&time=60%2B";
 
-      vm.sendRequest = (query, prepTime, calories) => {
+    vm.calories0 ="&calories=0-500";
+    vm.calories500 ="&calories=500-800";
+    vm.calories800 ="&calories=800-1200";
+    vm.calories1200 ="&calories=1200%2B";
+    
+    // Set vm.result to whatever finalData is in the service.js 
+    vm.result = RecipeRequest.returnResults();
 
-      RecipeRequest.getRecipeRequest(query, prepTime, calories).then((data) => {
-        vm.result = data;
-
-        console.log(vm.prepTime);
-        console.log(vm.calories);
-        
-      });
+    // function to show the advanced search options
+    vm.showAdvanced = () => {
+      angular.element(document.querySelectorAll('.advancedSearch') ).css("display", "flex");
     }
 
+    // Send the parameters for the search query we want to do. Pass our query, prepTime and calories as necessary
+    vm.sendRequest = (query, prepTime, calories) => {
+      RecipeRequest.getRecipeRequest(query, prepTime, calories).then((data) => {
+        vm.result = data;
+      });
+    }
   }]
 };
-
 
 angular
   .module("App")
