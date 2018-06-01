@@ -6,7 +6,7 @@ const recipeDetails = {
         <div class="recipe">
         <div class="sectionHeader"
             <h2>{{$ctrl.clickedRecipe.recipe.label}}</h2>
-            <a href="#!/search-criteria"><i class="material-icons" ng-class="{'fav': liked, 'unfav': !liked}" ng-click="liked=!liked" >cancel</i></a>
+            <a href="javascript:void(0);" ng-click="$ctrl.goBack();"><i class="material-icons">cancel</i></a>
         </div>
             <img src="{{ $ctrl.clickedRecipe.recipe.image }}">
             <h4>Prep Time: <spanclass="recipeSmallFont">{{ $ctrl.clickedRecipe.recipe.totalTime }}</spanclass> Minutes</h4>
@@ -21,6 +21,10 @@ const recipeDetails = {
         const vm = this;
         vm.clickedRecipe = RecipeRequest.viewDetails();
         console.log(vm.clickedRecipe);
+
+        vm.goBack = () => { 
+            window.history.back();
+        };
         
     }]
 }
