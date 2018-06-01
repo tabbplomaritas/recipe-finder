@@ -10,7 +10,10 @@ const searchCriteria = {
         <img src="assets/Icons/search.svg">
         </button>
     </div>
-      <div class="prepTime">
+
+      <button id="advancedSearchButton" type="button" ng-click="isAdvancedOpen = !isAdvancedOpen">Advanced Search</button>
+
+      <div class="advancedSearch" ng-show="isAdvancedOpen">
         <h3>Prep time</h3>
         <div class="options">
           <input name="prepTime" type="radio" ng-model="$ctrl.prepTime" ng-value="$ctrl.prepTime020">
@@ -26,7 +29,7 @@ const searchCriteria = {
         </div>
       </div>
 
-      <div class="calories">
+      <div class="advancedSearch" ng-show="isAdvancedOpen">
         <h3>Calories in recipe</h3>
         <div class="options">
           <input name="calories" type="radio" ng-model="$ctrl.calories" ng-value="$ctrl.calories0">
@@ -58,9 +61,13 @@ const searchCriteria = {
       vm.calories800 ="&calories=800-1200";
       vm.calories1200 ="&calories=1200%2B";
      
+      vm.showAdvanced = () => {
+        console.log("show advanced button working");
+        
+        angular.element(document.querySelectorAll('.advancedSearch') ).css("display", "flex");
+      }
 
-
-    vm.sendRequest = (query, prepTime, calories) => {
+      vm.sendRequest = (query, prepTime, calories) => {
 
       RecipeRequest.getRecipeRequest(query, prepTime, calories).then((data) => {
         vm.result = data;

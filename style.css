@@ -238,9 +238,22 @@ recipe-list, favorites-list {
   cursor: pointer;
 }
 
-.prepTime {
+.advancedSearch{
+  display: 
+}
+
+.advancedSearchOn {
   display: flex;
   flex-direction: column;
+  transition: .3s all;
+}
+
+#advancedSearchButton {
+  margin: 0 auto;
+  width: 8rem;
+  height: 4rem;
+  padding: .5rem;
+  border-radius: .5rem;
 }
 
 .options {
@@ -275,6 +288,7 @@ input[type="radio"] {
 /* recipe-details styles */
 
 .recipe{
+  
   display: flex;
   flex-direction: column;
   align-items: center;
