@@ -64,10 +64,10 @@ ng-view {
 }
 
 .motto {
-  
+  margin: 0 auto;
   font-family: header;
   color: #093F39;
-  font-size: 3rem;
+  font-size: 3.6rem;
 }
 
 .motto p:nth-child(2){
