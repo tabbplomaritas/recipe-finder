@@ -69,7 +69,7 @@ const searchCriteria = {
       vm.showAdvanced = () => {
         console.log("show advanced button working");
         
-        angular.element(document.querySelectorAll('.advancedSearch') ).css("display", "flex");
+        // angular.element(document.querySelectorAll('.advancedSearch') ).css("display", "flex");
       }
 
       vm.sendRequest = (query, prepTime, calories) => {
