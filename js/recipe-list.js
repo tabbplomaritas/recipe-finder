@@ -9,7 +9,7 @@ const recipeList = {
       <div class="recipeThumbs" ng-click="$ctrl.sendRecipeDetails(item);" ng-repeat="item in $ctrl.result.data.hits" item="item">
         <div class="starCont">  
           <h4 class="recipelabel">{{item.recipe.label}}</h4>
-          <i class="material-icons" ng-click="$ctrl.addToFavorite(item); $event.stopPropagation();">grade</i>
+          <i class="material-icons !fav" ng-class="{'!fav': fav, 'fav': !fav}"  ng-click="!fav=fav; $ctrl.addToFavorite(item); $event.stopPropagation();">grade</i>
         </div>
         <img src="{{ item.recipe.image }}" >
         
