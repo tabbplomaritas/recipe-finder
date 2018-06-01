@@ -71,10 +71,6 @@ const searchCriteria = {
       }
 
       vm.sendRequest = (query, prepTime, calories) => {
-<<<<<<< HEAD
-=======
-      angular
->>>>>>> fc7096f82397bd6a208e633f4f1018d1451ebdad
 
       RecipeRequest.getRecipeRequest(query, prepTime, calories).then((data) => {
         vm.result = data;
