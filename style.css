@@ -53,6 +53,14 @@ ng-view {
   height: 100vh;
   overflow: scroll;
 }
+::-webkit-scrollbar {
+  width: 12px;
+  display: none;
+}
+::-webkit-scrollbar-track {
+  display: none;
+}
+
 
 #logo {
   width: 20rem;
