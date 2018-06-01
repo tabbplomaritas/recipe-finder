@@ -64,14 +64,15 @@ ng-view {
 }
 
 .motto {
+  
   font-family: header;
-  /* margin: 1rem; */
   color: #093F39;
   font-size: 3rem;
 }
 
 .motto p:nth-child(2){
     margin-left: 3rem;
+
 }
 
 h2 {
@@ -138,6 +139,7 @@ input {
   width: 30rem;
   height: 3rem;
   padding: .5rem;
+  border-right: none;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -173,11 +175,12 @@ button:hover {
   align-content: center;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  background-color: #FFCC33;
 }
 
-.searchButton img {
+.searchButton i {
   width: 2.5rem;
-  color: #FFCC33;
+  color: #00594D;
 }
 
 .iconWrapper {
@@ -238,10 +241,6 @@ recipe-list, favorites-list {
   cursor: pointer;
 }
 
-/* .advancedSearch{
-  display: 
-} */
-
 .advancedSearchOn {
   display: flex;
   flex-direction: column;
@@ -254,7 +253,7 @@ recipe-list, favorites-list {
   margin: 0 auto;
   width: 8rem;
   height: 4rem;
-  padding: .5rem;
+  font-size: 1.2rem;
   border-radius: .5rem;
 }
 #advancedSearchButton:hover{
