@@ -18,8 +18,6 @@ const recipeList = {
   controller: ["RecipeRequest", function(RecipeRequest) {
     const vm = this;
 
-    
-
     vm.addToFavorite = (item, $event) => {
       angular.element($event.target).css("color", "#FFFFFF");
       RecipeRequest.addFavorite(item);

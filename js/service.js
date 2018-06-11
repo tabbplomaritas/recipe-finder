@@ -24,10 +24,7 @@ function RecipeRequest($http, $location) {
       // &health=alcohol-free
     }).then((response) => {
       finalData = response;
-      
-  
-      
-      return finalData;
+        return finalData;
     }, (error) => {
       console.log(error);
     });
